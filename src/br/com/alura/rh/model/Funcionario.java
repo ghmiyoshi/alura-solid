@@ -1,9 +1,6 @@
 package br.com.alura.rh.model;
 
-import br.com.alura.rh.ValidacaoException;
-
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Funcionario {
@@ -20,15 +17,6 @@ public class Funcionario {
         this.cargo = cargo;
         this.salario = salario;
         this.dataUltimoReajuste = dataUltimoReajuste;
-    }
-
-    public void reajustarSalario(BigDecimal aumento) {
-        BigDecimal percentualReajuste = aumento.divide(salario, RoundingMode.HALF_UP);
-        if (percentualReajuste.compareTo(BigDecimal.valueOf(0.4)) > 0) {
-            throw new ValidacaoException("Reajuste não pode ser superior a 40% do salário");
-        }
-        this.salario = this.salario.add(aumento);
-        this.dataUltimoReajuste = LocalDate.now();
     }
 
     public String getNome() {
@@ -61,6 +49,11 @@ public class Funcionario {
 
     public void setDataUltimoReajuste(LocalDate dataUltimoReajuste) {
         this.dataUltimoReajuste = dataUltimoReajuste;
+    }
+
+    public void atualizarSalario(BigDecimal novoSalario) {
+        this.salario = novoSalario;
+        this.dataUltimoReajuste = LocalDate.now();
     }
 
 }
