@@ -1,6 +1,6 @@
 package br.com.alura.rh.validacao;
 
-import br.com.alura.rh.ValidacaoException;
+import br.com.alura.rh.exception.ValidacaoException;
 import br.com.alura.rh.model.Funcionario;
 
 import java.math.BigDecimal;
