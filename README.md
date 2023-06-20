@@ -1,6 +1,6 @@
 # SOLID com Java
 
-Conteúdos interessantes apresentados neste curso:
+Conteúdos interessantes aprendidos neste curso:
 * Calcular meses entre duas datas;
 
 https://github.com/ghmiyoshi/alura-solid/blob/main/src/br/com/alura/rh/validacao/ValidacaoPeriodicidadeEntreReajustes.java
