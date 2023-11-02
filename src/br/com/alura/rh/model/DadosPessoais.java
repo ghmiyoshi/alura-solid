@@ -9,7 +9,7 @@ public class DadosPessoais {
     private Cargo cargo;
     private BigDecimal salario;
 
-    public DadosPessoais(String nome, String cpf, Cargo cargo, BigDecimal salario) {
+    public DadosPessoais(final String nome, final String cpf, final Cargo cargo, final BigDecimal salario) {
         this.nome = nome;
         this.cpf = cpf;
         this.cargo = cargo;
@@ -20,7 +20,7 @@ public class DadosPessoais {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(final String nome) {
         this.nome = nome;
     }
 
@@ -28,7 +28,7 @@ public class DadosPessoais {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(final String cpf) {
         this.cpf = cpf;
     }
 
@@ -36,7 +36,7 @@ public class DadosPessoais {
         return cargo;
     }
 
-    public void setCargo(Cargo cargo) {
+    public void setCargo(final Cargo cargo) {
         this.cargo = cargo;
     }
 
@@ -44,8 +44,7 @@ public class DadosPessoais {
         return salario;
     }
 
-    public void setSalario(BigDecimal salario) {
+    public void setSalario(final BigDecimal salario) {
         this.salario = salario;
     }
-
 }

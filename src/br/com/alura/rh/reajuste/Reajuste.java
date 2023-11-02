@@ -6,7 +6,5 @@ import java.time.LocalDate;
 public interface Reajuste {
 
     LocalDate data();
-
     BigDecimal valor();
-
 }

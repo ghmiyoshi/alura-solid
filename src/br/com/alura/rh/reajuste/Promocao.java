@@ -1,6 +1,7 @@
 package br.com.alura.rh.reajuste;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Promocao implements ReajusteTributavel {
@@ -8,7 +9,7 @@ public class Promocao implements ReajusteTributavel {
     private BigDecimal valor;
     private LocalDate data;
 
-    public Promocao(BigDecimal valor, LocalDate data) {
+    public Promocao(final BigDecimal valor, final LocalDate data) {
         this.valor = valor;
         this.data = data;
     }
@@ -25,7 +26,6 @@ public class Promocao implements ReajusteTributavel {
 
     @Override
     public BigDecimal valorImpostoDeRenda() {
-        return this.valor.multiply(BigDecimal.valueOf(0.1));
+        return this.valor.multiply(BigDecimal.valueOf(0.1)).setScale(2, RoundingMode.HALF_UP);
     }
-
 }

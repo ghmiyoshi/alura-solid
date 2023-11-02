@@ -8,7 +8,7 @@ public class Anuenio implements Reajuste {
     private BigDecimal valor;
     private LocalDate data;
 
-    public Anuenio(BigDecimal valor, LocalDate data) {
+    public Anuenio(final BigDecimal valor, final LocalDate data) {
         this.valor = valor;
         this.data = data;
     }
@@ -22,5 +22,4 @@ public class Anuenio implements Reajuste {
     public BigDecimal valor() {
         return valor;
     }
-
 }

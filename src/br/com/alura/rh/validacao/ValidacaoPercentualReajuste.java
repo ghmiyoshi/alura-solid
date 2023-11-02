@@ -9,11 +9,10 @@ import java.math.RoundingMode;
 public class ValidacaoPercentualReajuste implements ValidacaoReajuste {
 
     @Override
-    public void validar(Funcionario funcionario, BigDecimal aumento) {
-        BigDecimal percentualReajuste = aumento.divide(funcionario.getDadosPessoais().getSalario(), RoundingMode.HALF_UP);
+    public void validar(final Funcionario funcionario, final BigDecimal aumento) {
+        var percentualReajuste = aumento.divide(funcionario.getDadosPessoais().getSalario(), RoundingMode.HALF_UP);
         if (percentualReajuste.compareTo(BigDecimal.valueOf(0.4)) > 0) {
             throw new ValidacaoException("Reajuste não pode ser superior a 40% do salário");
         }
     }
-
 }

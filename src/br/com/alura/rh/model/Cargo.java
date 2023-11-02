@@ -28,5 +28,4 @@ public enum Cargo {
     };
 
     public abstract Cargo getProximoCargo();
-
 }
